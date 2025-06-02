@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  /* font-family: "poppins", sans-serif; */
-  font-family: "Pacifico", cursive;
+  font-family: "poppins", sans-serif;
+  /* font-family: "Pacifico", cursive; */
   background-color: var(--second);
 }
 
@@ -231,7 +231,7 @@ body {
 .konten h2 {
   color: white;
   font-size: 3rem;
-  font-family: "Pacifico", cursive;
+  font-family: "Poppins", sans-serif;
   margin: 0.3rem 0;
   text-shadow: 2px 3px 5px black;
 }
@@ -239,7 +239,7 @@ body {
 .konten h1 {
   margin-top: 4rem;
   color: white;
-  font-family: "Pacifico", cursive;
+  font-family: "Poppins", sans-serif;
   font-size: xx-large;
   text-shadow: 2px 6px 5px black;
 }
@@ -295,6 +295,7 @@ body {
 .tentang-konten h2 {
   font-size: 1.5rem;
   text-decoration: underline;
+  text-align: center;
 }
 
 .tentang-konten p {
