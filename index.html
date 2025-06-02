@@ -55,7 +55,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round">
-  <use href="/img/feather-sprite.svg#shopping-cart" />
+  <use href="./img/feather-sprite.svg#shopping-cart" />
 </svg></i>
 <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span></a>
 
@@ -68,7 +68,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round">
-  <use href="/img/feather-sprite.svg#menu" />
+  <use href="./img/feather-sprite.svg#menu" />
 </svg></i
         ></a>
       </div>
@@ -78,7 +78,7 @@
   <div class="shopping-cart">
         <template x-for="(item, index) in $store.cart.items" x-key="index">
           <div class="cart-item">
-            <img :src="`/img/${item.img}`"/>
+            <img :src="`./img/${item.img}`"/>
             <div class="detail-barang">
               <h3 x-text="item.nama"></h3>
               <!-- <div class="harga-barang"><span x-text="rupiah(item.harga)"></span> &times; -->
@@ -118,7 +118,7 @@
           stroke-width="1"
           stroke-linecap="round"
           stroke-linejoin="round">
-          <use href="/img/feather-sprite.svg#shopping-bag" /></svg>
+          <use href="./img/feather-sprite.svg#shopping-bag" /></svg>
         </div>
     </nav>
 
@@ -140,7 +140,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <use href="/img/feather-sprite.svg#arrow-down" />
+  <use href="./img/feather-sprite.svg#arrow-down" />
 </svg></a>
       </main>
     </section>
@@ -151,7 +151,7 @@
           <h2>TENTANG</h2> -->
       <div class="tentang-row">
         <div class="tentang-img">
-          <img src="/img/Asset 2@6x.png" />
+          <img src="./img/Asset 2@6x.png" />
         </div>
 
         <div class="tentang-konten">
@@ -191,7 +191,7 @@
       <template x-for="(item, index) in coffee" x-key="index">
       <div class="menu-row">
           <div class="menu-row-img">
-            <img :src=" `/img/${item.img}`"/>
+            <img :src=" `./img/${item.img}`"/>
               <h3 class="menu-row-nama" x-text = item.nama></h3>
               <div class="menu-row-harga">
                 <p x-text = rupiah(item.harga)></p>
@@ -207,7 +207,7 @@
        <template x-for="(item, index) in drink" x-key="index">
          <div class="menu-row">
             <div class="menu-row-img">
-              <img :src=" `/img/${item.img}`"/>
+              <img :src=" `./img/${item.img}`"/>
               <h3 class="menu-row-nama" x-text = item.nama></h3>
               <div class="menu-row-harga">
                 <p x-text = rupiah(item.harga)></p>
@@ -226,7 +226,7 @@
 <section class="akhir">
   <div class="akhir-row">
     <div class="akhir-img">
-      <img src="/img/Poster-warkop.png" />
+      <img src="./img/Poster-warkop.png" />
     </div>
     
     <div class="akhir-teks">
