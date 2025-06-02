@@ -198,27 +198,43 @@ body {
   left: 13px;
   position: absolute;
   font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .hero {
-  min-height: 100vh;
-  background-image: url(background-hero.png);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-image: url(/img/background-hero.png);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+  box-sizing: border-box;
 }
 
-.konten {
+/* .konten {
   align-items: center;
   flex-direction: column;
   justify-content: center;
   display: flex;
   height: 100vh;
-  margin-top: 3rem;
-  padding-top: 3rem;
+  padding-top: 8rem;
+  text-align: center;
+} */
+
+.konten {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+  padding: 1rem; /* atau 0 jika tidak perlu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* agar konten menyesuaikan tinggi hero */
 }
 
 .konten img {
@@ -506,7 +522,7 @@ body {
   }
 
   .shopping-cart {
-    width: 70%;
+    width: 80%;
   }
 
   .empty-cart {
@@ -550,7 +566,7 @@ body {
 
   /* Bagian hero section */
   .konten {
-    margin-top: -3rem;
+    margin-top: 3rem;
   }
 
   .konten img {

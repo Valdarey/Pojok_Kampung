@@ -26,3 +26,9 @@ document.addEventListener("click", function (hapus) {
     shopping.classList.remove("active");
   }
 });
+
+[...document.querySelectorAll("*")].forEach((el) => {
+  if (el.offsetWidth > document.documentElement.clientWidth) {
+    console.log("Overflowing element:", el);
+  }
+});
