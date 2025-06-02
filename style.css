@@ -205,7 +205,7 @@ body {
   width: 100vw;
   height: 100vh;
   align-items: center;
-  background-image: url(/img/background-hero.png);
+  background-image: url(background-hero.png);
   background-position: center;
   background-size: cover;
   border-bottom-left-radius: 10px;
@@ -229,12 +229,12 @@ body {
   max-width: 100%;
   text-align: center;
   color: white;
-  padding: 1rem; /* atau 0 jika tidak perlu */
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%; /* agar konten menyesuaikan tinggi hero */
+  height: 100%;
 }
 
 .konten img {
@@ -246,7 +246,7 @@ body {
 
 .konten h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-family: "Poppins", sans-serif;
   margin: 0.3rem 0;
   text-shadow: 2px 3px 5px black;
@@ -256,7 +256,7 @@ body {
   margin-top: 4rem;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: xx-large;
+  font-size: 1.9rem;
   text-shadow: 2px 6px 5px black;
 }
 
@@ -281,16 +281,17 @@ body {
 }
 
 /* BAGIAN TENTANG */
-.tentang {
+.tentang-row {
   min-height: 100vh;
-  padding: 8rem 0 3% 3%;
+  padding: 6rem 2%;
+  display: flex;
 }
 
 .tentang img {
-  width: 500px;
-  height: 500px;
-  filter: drop-shadow(0 0 5px black);
-  -webkit-filter: drop-shadow(0 0 5px black);
+  width: 300px;
+  /* height: 500px; */
+  /* filter: drop-shadow(0 0 5px black);
+  -webkit-filter: drop-shadow(0 0 5px black); */
 }
 /* 
 .tentang-kami {
@@ -298,10 +299,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
 } */
-
-.tentang-row {
-  display: flex;
-}
 
 .tentang-konten {
   padding: 6rem 2rem;
@@ -323,7 +320,7 @@ body {
 /* MENU SECTION */
 
 .daftar {
-  padding-top: 8rem;
+  padding-top: 10rem;
   margin-bottom: 4rem;
 }
 
@@ -501,9 +498,9 @@ body {
   margin-top: 1.3rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   html {
-    font-size: 60%;
+    font-size: 62%;
   }
 
   .logo .hamburger {
@@ -522,7 +519,11 @@ body {
   }
 
   .shopping-cart {
-    width: 80%;
+    width: 90%;
+  }
+
+  .tentang-img img {
+    display: none;
   }
 
   .empty-cart {
