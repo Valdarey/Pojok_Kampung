@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasir Pojok Kampung</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Script Icon atau Logo -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Library CDN Typewritting -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- ALPINE.JS -->
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- script alpine -->
+    <!-- <script src="/SRC/app.js" async></script>  -->
+
+    <!-- Midtrans -->
+      <script type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-v2fnE-2lqeMQX63O"></script>
+
+
+  </head>
+
+  <body>
+    <nav class="header" x-data>
+      <img src="/img/logo1.png" />
+      <div class="header-list">
+        <a href="#home">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#daftar">Menu</a>
+      </div>
+
+      <!-- LOGO BUAT SHOPPING CART DAN MENU -->
+      <div class="logo" >
+        <a href="#" @click.prevent id="barang"><svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentcolor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round">
+  <use href="/img/feather-sprite.svg#shopping-cart" />
+</svg></i>
+<span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span></a>
+
+        <a href="#" @click.prevent class="hamburger" id="hamburger-menu"
+          ><svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="currentcolor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round">
+  <use href="/img/feather-sprite.svg#menu" />
+</svg></i
+        ></a>
+      </div>
+  <!-- ENDDDDD -->
+
+  <!-- ISI DARI KERANJANG BELANJA -->
+  <div class="shopping-cart">
+        <template x-for="(item, index) in $store.cart.items" x-key="index">
+          <div class="cart-item">
+            <img :src="`/img/${item.img}`"/>
+            <div class="detail-barang">
+              <h3 x-text="item.nama"></h3>
+              <!-- <div class="harga-barang"><span x-text="rupiah(item.harga)"></span> &times; -->
+                <button @click="$store.cart.remove(item.id)" >&minus;</button>
+                <span x-text="item.quantity">0</span>
+                <button  @click="$store.cart.add(item)">&plus;</button> &equals;
+                <span x-text="rupiah(item.total)"></span>
+              </div>
+            </div>
+          </div>
+        </template>
+          <div class="cart-total">
+            <h2 x-show="$store.cart.items.length" >Total : <span x-text="rupiah($store.cart.total)"></span></h2>  
+          </div>
+           
+          <div class="form-cart">
+            <form action="" id="form-full">
+              <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">  
+              <input type="hidden" name="total" x-model="$store.cart.total"> 
+
+              <label for="nama" x-show="$store.cart.items.length">
+                <span>Nama : </span>
+                <input type="text" name="nama" id="nama" placeholder="Harus diisi">
+              </label>
+  
+            </form>
+              <button x-show="$store.cart.items.length" class="tombol-checkout disabled" id="checkout-btn">Checkout</button>      
+          </div>
+      
+
+        <div class="empty-cart">
+          <h3 x-show="!$store.cart.items.length" >Keranjang kosong</h3> <svg x-show="!$store.cart.items.length"
+          width="10rem"
+          height="10rem"
+          fill="none"
+          stroke="currentcolor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <use href="/img/feather-sprite.svg#shopping-bag" /></svg>
+        </div>
+    </nav>
+
+    <!-- Untuk tampilan di beranda paling atas web -->
+    <section class="hero" id="home">
+      <main class="konten">
+        <h2>Selamat Datang</h2>
+        <h2>" Warkop Pojok Kampung "</h2>
+        <img src="/img/logo1.png" />
+        <h1>
+          Nikmati cita rasa kopi lokal dan suasana nyaman ala kampung halaman
+        </h1>
+        <a href="#tentang" class="tombol-hero"> <svg
+  width="24"
+  height="24"
+  fill="none"
+  stroke="black"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <use href="/img/feather-sprite.svg#arrow-down" />
+</svg></a>
+      </main>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="tentang" id="tentang">
+      <!-- <div class="tentang-kami">
+          <h2>TENTANG</h2> -->
+      <div class="tentang-row">
+        <div class="tentang-img">
+          <img src="/img/Asset 2@6x.png" />
+        </div>
+
+        <div class="tentang-konten">
+          <h2>
+            Selamat datang di Warkop Kami – tempat ngopi, ngobrol, dan ngumpul!
+          </h2>
+          <p>
+            Kami bukan sekadar warung kopi biasa. Di sini, kamu bisa menikmati
+            kopi racikan khas yang dibuat dengan penuh rasa, ditemani suasana
+            yang nyaman dan hangat—seolah ngopi di rumah sendiri.
+          </p>
+          <p>
+            Bermula dari keinginan sederhana untuk menyediakan tempat nongkrong
+            yang asik dan terjangkau, kami hadir sebagai tempat persinggahan
+            favorit, baik untuk ngobrol santai bareng teman, atau sekadar
+            melepas penat setelah aktivitas seharian.
+          </p>
+          <p>
+            Yuk, mampir dan rasakan sendiri hangatnya suasana warkop kami.
+            Karena bagi kami, setiap cangkir kopi punya cerita—dan kami senang
+            jadi bagian dari ceritamu.
+          </p>
+        </div>
+      </div>
+      <!-- </div> -->
+    </section>
+    <!-- Tentang Kami End -->
+
+    <!-- Menu List -->
+    <section class="daftar" id="daftar">
+      <h3>Nikmati Kopimu</h3>
+      <p>- Jangan ada momen yang tertinggal -</p>
+    </section>
+
+    <section class="menu" id="menu" x-data="produk">
+      <h2>Coffee</h2>
+      <template x-for="(item, index) in coffee" x-key="index">
+      <div class="menu-row">
+          <div class="menu-row-img">
+            <img :src=" `/img/${item.img}`"/>
+              <h3 class="menu-row-nama" x-text = item.nama></h3>
+              <div class="menu-row-harga">
+                <p x-text = rupiah(item.harga)></p>
+                <button href="#" @click="$store.cart.add(item)">Add to Cart</button>
+              </div>
+          </div>
+        </div>   
+        </template>
+    </section>
+
+     <section class="menu2" id="menu" x-data="produk">
+      <h2>Non Coffee</h2>
+       <template x-for="(item, index) in drink" x-key="index">
+         <div class="menu-row">
+            <div class="menu-row-img">
+              <img :src=" `/img/${item.img}`"/>
+              <h3 class="menu-row-nama" x-text = item.nama></h3>
+              <div class="menu-row-harga">
+                <p x-text = rupiah(item.harga)></p>
+                <button href="#" @click="$store.cart.add(item)">Add to Cart</button>
+              </div>
+            </div>
+        </div>   
+        </template>
+    </section>
+<!-- MENU ENDDDDDDD -->
+
+<div class="akhir-upper">
+  <h3>Sampai Jumpa</h3>
+  <p>- di cangkir berikutnya -</p>
+</div>
+<section class="akhir">
+  <div class="akhir-row">
+    <div class="akhir-img">
+      <img src="/img/Poster-warkop.png" />
+    </div>
+    
+    <div class="akhir-teks">
+      <h2>Terima Kasih Sudah Berkunjung!</h2>
+
+      <p>Kami sangat berterima kasih atas kunjungan dan dukungan Anda.
+Warung Kopi kami ada karena Anda semua – para pecinta kopi, obrolan hangat, dan suasana santai.</p>
+
+        <p>Semoga setiap tegukan kopi yang Anda nikmati di sini membawa kebahagiaan dan semangat baru.
+Kami tunggu kedatangan Anda kembali!</p>
+
+<p>Salam hangat,</p>
+  <h1>Tim Warung Kopi [Pojok Kampung]</h1>
+    </div>
+  </div>
+</section>
+
+
+    <script src="/js/script.js"></script>
+    <script src="/SRC/app.js" ></script> 
+
+  </body>
+</html>
