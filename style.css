@@ -59,7 +59,7 @@ body {
   position: absolute;
   top: 100%;
   background-color: var(--second);
-  right: -100%;
+  right: 0;
   width: 25rem;
   height: 70vh;
   padding: 0 1rem;
@@ -69,10 +69,12 @@ body {
   border-bottom-left-radius: 8px;
   overflow-y: scroll;
   font-family: "poppins", sans-serif;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
 .shopping-cart.active {
-  right: 0;
+  transform: scaleY(1);
 }
 
 .shopping-cart img {
@@ -285,10 +287,11 @@ body {
   min-height: 100vh;
   padding: 6rem 2%;
   display: flex;
+  align-items: center;
 }
 
 .tentang img {
-  width: 300px;
+  width: 30rem;
   /* height: 500px; */
   /* filter: drop-shadow(0 0 5px black);
   -webkit-filter: drop-shadow(0 0 5px black); */
@@ -307,7 +310,6 @@ body {
 
 .tentang-konten h2 {
   font-size: 1.5rem;
-  text-decoration: underline;
   text-align: center;
 }
 
@@ -381,6 +383,27 @@ body {
   padding: 0 3rem;
 }
 
+.menu3 {
+  display: grid;
+  margin-top: 3rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(7, 2fr);
+  overflow: auto;
+  padding: 0 2rem;
+  font-family: "poppins", sans-serif;
+}
+
+.menu3 h2 {
+  color: var(--primary);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-size: xx-large;
+  text-decoration: underline;
+  padding: 0 3rem;
+}
+
 .menu::-webkit-scrollbar {
   height: 0.4rem;
   padding: 2rem 0;
@@ -399,6 +422,18 @@ body {
 }
 
 .menu2::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  cursor: pointer;
+  padding: 2rem 0;
+  border-radius: 2px;
+}
+
+.menu3::-webkit-scrollbar {
+  height: 0.4rem;
+  padding: 2rem 0;
+}
+
+.menu3::-webkit-scrollbar-thumb {
   background-color: var(--primary);
   cursor: pointer;
   padding: 2rem 0;
@@ -496,6 +531,31 @@ body {
 .akhir-teks p {
   font-size: 1.2rem;
   margin-top: 1.3rem;
+}
+
+.kotak {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.kotak-konten {
+  width: 17rem;
+  border: 2px solid var(--primary);
+  padding: 1rem;
+}
+
+.kotak-konten img {
+  width: 13rem;
+}
+
+/* .kotak-hidden p {
+  position: absolute;
+} */
+
+.footer {
+  background-color: var(--primary);
+  min-height: 10rem;
 }
 
 @media (max-width: 800px) {
@@ -630,6 +690,14 @@ body {
   }
 
   .menu2::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .menu3::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu3::-webkit-scrollbar-thumb {
     display: none;
   }
 

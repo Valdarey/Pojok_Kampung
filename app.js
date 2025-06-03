@@ -127,7 +127,7 @@ checkButton.addEventListener("click", function (e) {
 });
 
 const formatPesan = (obj) => {
-  return `---Data Pelanggan---
+  return `--- Data Pelanggan ---
   Nama: ${obj.nama} \n
   --- Data Pesanan --- 
   ${JSON.parse(obj.items).map(
