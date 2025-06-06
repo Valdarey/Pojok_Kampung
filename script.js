@@ -27,6 +27,15 @@ document.addEventListener("click", function (hapus) {
   }
 });
 
+// const kotak = document.querySelector("#kotak");
+// const hidden = document.querySelector(".kotak-hidden");
+
+// hidden.onclick = (e) => {
+//   hidden.style.display = "flex";
+//   e.preventDefault;
+// };
+
+// cek ada elemen yang offset dari layar
 [...document.querySelectorAll("*")].forEach((el) => {
   if (el.offsetWidth > document.documentElement.clientWidth) {
     console.log("Overflowing element:", el);

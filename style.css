@@ -545,13 +545,32 @@ body {
   padding: 1rem;
 }
 
+.kotak-konten h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .kotak-konten img {
   width: 13rem;
 }
 
-/* .kotak-hidden p {
-  position: absolute;
-} */
+.kotak-konten span {
+  margin: 0 1rem;
+}
+
+.kotak-konten a {
+  margin-top: 2rem;
+  padding: 0.6rem;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: var(--primary);
+  color: white;
+}
+
+.kotak a:hover {
+  background-color: white;
+  color: black;
+}
 
 .footer {
   background-color: var(--primary);
