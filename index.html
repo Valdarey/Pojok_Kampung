@@ -184,17 +184,8 @@
     <div class="kotak-konten">
       <img :src=" `./img/${item.img}`"/>
       <h3 x-text="item.nama"></h3>
-        <a href="https://drive.google.com/file/d/1QVKbm38p66UJ47QOOfN5QrGIW-sABU9s/view?usp=sharing" id="hidden"><svg
-     width="24"
-     height="24"
-     fill="none"
-     stroke="currentcolor"
-     stroke-width="2"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-    >
-     <use href="./img/feather-sprite.svg#download" />
-    </svg><span>Download</span></a>
+        <a :href="item.link" target="_blank">
+     <span>Download</span></a>
     </div>
   </template>
 </section>

@@ -36,8 +36,16 @@ document.addEventListener("alpine:init", () => {
       },
     ],
     poster: [
-      { nama: "Poster-1", img: "POSETR.-012.png" },
-      { nama: "Poster-2", img: "POSTER-011.png" },
+      {
+        nama: "Poster-1",
+        img: "POSETR.-012.png",
+        link: "https://drive.google.com/file/d/1QVKbm38p66UJ47QOOfN5QrGIW-sABU9s/view?usp=sharing",
+      },
+      {
+        nama: "Poster-2",
+        img: "POSTER-011.png",
+        link: "https://drive.google.com/file/d/1fRRyiWmlherPMn0tmuwNURj-dgiUUURB/view?usp=sharing",
+      },
     ],
   }));
 
