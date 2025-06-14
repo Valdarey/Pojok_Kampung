@@ -35,6 +35,10 @@ document.addEventListener("alpine:init", () => {
         harga: 241000,
       },
     ],
+    poster: [
+      { nama: "Poster-1", img: "POSETR.-012.png" },
+      { nama: "Poster-2", img: "POSTER-011.png" },
+    ],
   }));
 
   Alpine.store("cart", {
